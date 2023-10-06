@@ -36,6 +36,10 @@ with col3:
     button1=st.button('Export to csv')
   
     if button1:
-        myfile = 'well_test.csv'
-        df_selection.to_csv(myfile)
-        os.startfile(myfile)
+        csv_data = df_selection.to_csv(index=False)
+        st.download_button(
+            label="Download CSV",
+            data=csv_data,
+            file_name='well_test.csv',
+            mime='text/csv',
+        )
