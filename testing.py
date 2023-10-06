@@ -33,9 +33,7 @@ st.dataframe(df_selection)
 
 
 with col3:
-    button1=st.button('Export to csv')
-  
-    if button1:
+    
         csv_data = df_selection.to_csv(index=False)
         st.download_button(
             label="Download CSV",
