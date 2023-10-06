@@ -34,6 +34,7 @@ st.dataframe(df_selection)
 
 with col3:
     button1=st.button('Export to csv')
+    st.write('yess')
     if button1:
         myfile = 'well_test.csv'
         df_selection.to_csv(myfile)
